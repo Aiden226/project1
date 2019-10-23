@@ -6,11 +6,17 @@ import VueRouter from 'vue-router'
 //安装路由
 Vue.use(VueRouter)
 
+import moment from 'moment'
+
+Vue.filter('dataFormat',function(dataStr,pattern = "YYYY-MM-DD HH:mm:ss"){
+    return moment(dataStr).format(pattern)
+})
+
 //导入vue-resource
 import VueResource from 'vue-resource'
 //安装vue-resource
 Vue.use(VueResource)
-
+Vue.http.options.root = 'http://www.liulongbin.top:3005'
 
 // 导入mui的样式
 import './lib/mui/css/mui.min.css'
