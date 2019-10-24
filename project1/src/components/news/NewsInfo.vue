@@ -10,11 +10,17 @@
         <div class="content" v-html="newsinfo.content">
 
         </div>
+
+        <comment-box :id="this.id"></comment-box>
+
     </div>
 </template>
 
 <script>
 import {Toast} from 'mint-ui'
+
+import comment from '../subcomponents/Comment.vue'
+
 export default {
     data(){
         return {
@@ -37,6 +43,9 @@ export default {
             })
         }
     },
+    components:{
+        'comment-box' :comment
+    }
 }
 </script>
 
