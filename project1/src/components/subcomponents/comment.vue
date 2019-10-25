@@ -15,8 +15,9 @@
         >{{ (item.content ==='undefined'? '此用户很懒，嘛都没说': item.content )||(item.content ==='' ? '此用户神经病，发表了一条空评论': item.content )}}</div>
       </div>
     </div>
-
+<!-- 加载更多按钮 -->
     <mt-button type="danger" size="large" plain @click="getMore">加载更多</mt-button>
+
   </div>
 </template>
 
